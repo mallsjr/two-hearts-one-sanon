@@ -1,25 +1,4 @@
 :root {
-  color-scheme: light;
-  --ink: #173b2d;
-  --muted: #687368;
-  --paper: #f5f0e3;
-  --white: #fffaf0;
-  --sage: #e5ebe1;
-  --accent: #426747;
-  --serif: "Iowan Old Style", "Baskerville", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
-}
-
-body[data-theme="meadow"] {
-  --ink: #344436;
-  --muted: #788071;
-  --paper: #f6f1df;
-  --white: #fffaf0;
-  --sage: #e7ead7;
-  --accent: #a46b66;
-}
-
-body[data-theme="moonlit"] {
   color-scheme: dark;
   --ink: #eee9db;
   --muted: #bac3b7;
@@ -27,35 +6,21 @@ body[data-theme="moonlit"] {
   --white: #263c3a;
   --sage: #304744;
   --accent: #ddc88e;
+  --serif: "Iowan Old Style", "Baskerville", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
 }
 
-body[data-theme="moonlit"] .theme-picker,
-body[data-theme="moonlit"] .site-footer {
+.site-footer {
   border-color: rgba(238, 233, 219, 0.15);
 }
 
-body[data-theme="moonlit"] .theme-option,
-body[data-theme="moonlit"] .theme-step {
-  border-color: rgba(238, 233, 219, 0.28);
-}
-
-body[data-theme="moonlit"] .hero::before,
-body[data-theme="moonlit"] .hero::after {
+body .hero::before,
+body .hero::after {
   border-color: rgba(221, 200, 142, 0.24);
 }
 
-body[data-theme="meadow"] .hero::before,
-body[data-theme="meadow"] .hero::after {
-  border-style: dashed;
-  border-color: rgba(164, 107, 102, 0.22);
-}
-
-body[data-theme="moonlit"] .celebration {
+body .celebration {
   background-image: radial-gradient(circle at 12% 18%, rgba(221, 200, 142, 0.11) 0 1px, transparent 2px), radial-gradient(circle at 82% 35%, rgba(221, 200, 142, 0.15) 0 1px, transparent 2px), radial-gradient(circle at 72% 82%, rgba(221, 200, 142, 0.12) 0 1px, transparent 2px);
-}
-
-body[data-theme="meadow"] .celebration {
-  background-image: radial-gradient(ellipse at 8% 15%, rgba(164, 107, 102, 0.08), transparent 24%), radial-gradient(ellipse at 90% 80%, rgba(92, 122, 89, 0.09), transparent 25%);
 }
 
 * {
@@ -93,91 +58,6 @@ a:focus-visible {
   align-items: center;
   justify-content: space-between;
   padding: 28px clamp(24px, 7vw, 100px);
-}
-
-.theme-picker {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
-  gap: 28px;
-  align-items: center;
-  padding: 18px clamp(24px, 7vw, 100px);
-  border-top: 1px solid rgba(23, 59, 45, 0.09);
-  border-bottom: 1px solid rgba(23, 59, 45, 0.09);
-  background: var(--white);
-}
-
-.theme-picker .eyebrow {
-  margin-bottom: 6px;
-  font-size: 9px;
-}
-
-.theme-picker h2 {
-  margin: 0;
-  font-family: var(--serif);
-  font-size: 22px;
-  font-weight: 400;
-}
-
-.theme-description {
-  margin: 5px 0 0;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.theme-picker-controls {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-}
-
-.theme-options,
-.theme-stepper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 7px;
-}
-
-.theme-option,
-.theme-step {
-  border: 1px solid rgba(23, 59, 45, 0.2);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ink);
-  cursor: pointer;
-  font: inherit;
-  font-size: 10px;
-  letter-spacing: 0.03em;
-  padding: 8px 12px;
-  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
-}
-
-.theme-option[aria-pressed="true"] {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--white);
-}
-
-.theme-option:hover,
-.theme-step:hover {
-  border-color: var(--accent);
-}
-
-.theme-stepper {
-  align-items: center;
-  gap: 12px;
-}
-
-.theme-step {
-  padding: 5px 10px;
-}
-
-.theme-count {
-  color: var(--muted);
-  font-size: 10px;
-  font-variant-numeric: tabular-nums;
 }
 
 .wordmark {
@@ -239,7 +119,7 @@ a:focus-visible {
   z-index: 0;
   width: min(36vw, 440px);
   height: min(36vw, 440px);
-  border: 1px solid rgba(66, 103, 71, 0.16);
+  border: 1px solid rgba(221, 200, 142, 0.24);
   border-radius: 50%;
   content: "";
 }
@@ -270,7 +150,7 @@ a:focus-visible {
 .ornament-line {
   width: 46px;
   height: 1px;
-  background: rgba(66, 103, 71, 0.35);
+  background: rgba(221, 200, 142, 0.4);
 }
 
 .ornament-mark {
@@ -329,7 +209,7 @@ a:focus-visible {
   align-items: center;
   margin-top: 40px;
   padding-bottom: 7px;
-  border-bottom: 1px solid rgba(66, 103, 71, 0.35);
+  border-bottom: 1px solid rgba(221, 200, 142, 0.4);
   font-size: 10px;
   transition: color 160ms ease;
 }
@@ -448,7 +328,7 @@ a:focus-visible {
   align-items: center;
   justify-content: space-between;
   padding: 24px clamp(24px, 7vw, 100px);
-  border-top: 1px solid rgba(23, 59, 45, 0.12);
+  border-top: 1px solid rgba(238, 233, 219, 0.15);
 }
 
 .site-footer p {
@@ -476,29 +356,6 @@ a:focus-visible {
     font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-  }
-
-  .theme-picker {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    padding: 19px 24px;
-  }
-
-  .theme-picker-controls {
-    align-items: flex-start;
-  }
-
-  .theme-options {
-    justify-content: flex-start;
-  }
-
-  .theme-option {
-    padding: 8px 10px;
-    font-size: 9px;
-  }
-
-  .theme-stepper {
-    justify-content: flex-start;
   }
 
   .menu-icon,
