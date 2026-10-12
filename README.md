@@ -1,4 +1,4 @@
-# Merline & Robinson
+# Robenson & Merline
 
 A no-build wedding website using plain HTML, CSS, and JavaScript.
 
