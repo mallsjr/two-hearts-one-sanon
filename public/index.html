@@ -9,10 +9,10 @@
       content="Join Robenson and Merline as they celebrate their wedding. More details coming soon."
     >
     <title>Robenson &amp; Merline — We're getting married</title>
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="/styles.css?v=forest-themes-1">
+    <script src="/script.js?v=forest-themes-1" defer></script>
   </head>
-  <body>
+  <body data-theme="woodland">
     <header class="site-header">
       <a class="wordmark" href="#home" aria-label="Robenson and Merline, home">R<span>&amp;</span>M</a>
       <button
@@ -31,20 +31,56 @@
       </nav>
     </header>
 
+    <section class="theme-picker" aria-labelledby="theme-picker-title">
+      <div class="theme-picker-copy">
+        <p class="eyebrow">Three ways to set the scene</p>
+        <h2 id="theme-picker-title">Choose a forest mood</h2>
+        <p class="theme-description" id="theme-description" aria-live="polite">
+          Enchanted Woodland · Deep pine, moss, and storybook details.
+        </p>
+      </div>
+      <div class="theme-picker-controls">
+        <div class="theme-options" role="group" aria-label="Wedding website themes">
+          <button class="theme-option" type="button" data-theme-choice="woodland" aria-pressed="true">
+            Enchanted Woodland
+          </button>
+          <button class="theme-option" type="button" data-theme-choice="meadow" aria-pressed="false">
+            Wildflower Meadow
+          </button>
+          <button class="theme-option" type="button" data-theme-choice="moonlit" aria-pressed="false">
+            Moonlit Forest
+          </button>
+        </div>
+        <div class="theme-stepper">
+          <button class="theme-step" type="button" data-theme-step="-1" aria-label="Previous theme">← Previous</button>
+          <span class="theme-count" id="theme-count" aria-live="polite">1 / 3</span>
+          <button class="theme-step" type="button" data-theme-step="1" aria-label="Next theme">Next →</button>
+        </div>
+      </div>
+    </section>
+
     <main>
       <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="hero-ornament" aria-hidden="true">
-          <span class="ornament-line"></span>
-          <span class="ornament-mark">R <span>&amp;</span> M</span>
-          <span class="ornament-line"></span>
+        <div class="hero-copy">
+          <div class="hero-ornament" aria-hidden="true">
+            <span class="ornament-line"></span>
+            <span class="ornament-mark">R <span>&amp;</span> M</span>
+            <span class="ornament-line"></span>
+          </div>
+          <p class="eyebrow">With full hearts</p>
+          <h1 id="hero-title">Robenson <span class="ampersand">&amp;</span><br>Merline</h1>
+          <p class="hero-message">We're getting married</p>
+          <p class="hero-note">And we'd love to celebrate with you.<br>More details are coming soon.</p>
+          <a class="text-link" href="#celebration">A little more <span aria-hidden="true">↓</span></a>
         </div>
-        <p class="eyebrow">With full hearts</p>
-        <h1 id="hero-title">Robenson <span class="ampersand">&amp;</span><br>Merline</h1>
-        <p class="hero-message">We're getting married</p>
-        <p class="hero-note">And we'd love to celebrate with you.<br>More details are coming soon.</p>
-        <a class="text-link" href="#celebration">A little more <span aria-hidden="true">↓</span></a>
-        <span class="hero-flower flower-one" aria-hidden="true">✳</span>
-        <span class="hero-flower flower-two" aria-hidden="true">✳</span>
+        <figure class="hero-photo">
+          <img
+            src="/images/woodland-path.jpg"
+            alt="A lantern-lit garden path beneath a flower-covered woodland arch"
+            fetchpriority="high"
+          >
+          <figcaption>A little path to our next chapter</figcaption>
+        </figure>
       </section>
 
       <section class="intro section-wrap" id="our-story" aria-labelledby="story-title">
@@ -58,6 +94,14 @@
       </section>
 
       <section class="celebration" id="celebration" aria-labelledby="celebration-title">
+        <figure class="celebration-photo">
+          <img
+            src="/images/forest-reception.jpg"
+            alt="A warm candlelit reception beneath a canopy of forest greenery and lights"
+            loading="lazy"
+          >
+          <figcaption>An evening under the trees</figcaption>
+        </figure>
         <div class="celebration-inner">
           <p class="eyebrow">Save a little space in your calendar</p>
           <h2 id="celebration-title">The celebration</h2>
