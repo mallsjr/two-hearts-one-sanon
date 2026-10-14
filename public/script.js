@@ -1,6 +1,38 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
 const sparkleCanvas = document.querySelector(".sparkle-canvas");
+const countdown = {
+  days: document.querySelector("#countdown-days"),
+  hours: document.querySelector("#countdown-hours"),
+  minutes: document.querySelector("#countdown-minutes"),
+  seconds: document.querySelector("#countdown-seconds"),
+  note: document.querySelector("#countdown-note"),
+};
+
+if (countdown.days && countdown.hours && countdown.minutes && countdown.seconds) {
+  const weddingDate = new Date(2027, 4, 29);
+
+  function updateCountdown() {
+    const remaining = Math.max(0, weddingDate.getTime() - Date.now());
+    const secondsRemaining = Math.floor(remaining / 1000);
+    const days = Math.floor(secondsRemaining / 86400);
+    const hours = Math.floor((secondsRemaining % 86400) / 3600);
+    const minutes = Math.floor((secondsRemaining % 3600) / 60);
+    const seconds = secondsRemaining % 60;
+
+    countdown.days.textContent = String(days);
+    countdown.hours.textContent = String(hours).padStart(2, "0");
+    countdown.minutes.textContent = String(minutes).padStart(2, "0");
+    countdown.seconds.textContent = String(seconds).padStart(2, "0");
+
+    if (countdown.note && remaining === 0) {
+      countdown.note.textContent = "The day is here!";
+    }
+  }
+
+  updateCountdown();
+  window.setInterval(updateCountdown, 1000);
+}
 
 if (
   sparkleCanvas instanceof HTMLCanvasElement &&

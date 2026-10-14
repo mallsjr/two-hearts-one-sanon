@@ -328,6 +328,48 @@ a:focus-visible {
   background: var(--accent);
 }
 
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 32px auto 0;
+}
+
+.countdown-card {
+  display: flex;
+  min-height: 104px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 8px;
+  border: 1px solid rgba(221, 200, 142, 0.28);
+  background: rgba(29, 48, 47, 0.38);
+}
+
+.countdown-value {
+  color: var(--accent);
+  font-family: var(--serif);
+  font-size: clamp(30px, 4vw, 44px);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.countdown-label {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.countdown-note {
+  margin: 18px 0 0;
+  color: var(--accent);
+  font-family: var(--serif);
+  font-size: 16px;
+  font-style: italic;
+}
+
 .rsvp {
   background: var(--paper);
 }
@@ -450,6 +492,24 @@ a:focus-visible {
   .celebration-photo img {
     max-height: 520px;
     aspect-ratio: 0.85;
+  }
+
+  .countdown {
+    gap: 7px;
+  }
+
+  .countdown-card {
+    min-height: 86px;
+    padding: 12px 4px;
+  }
+
+  .countdown-value {
+    font-size: clamp(26px, 8vw, 36px);
+  }
+
+  .countdown-label {
+    font-size: 8px;
+    letter-spacing: 0.1em;
   }
 
   .section-wrap {
