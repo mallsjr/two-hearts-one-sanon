@@ -374,6 +374,106 @@ a:focus-visible {
   background: var(--paper);
 }
 
+.rsvp-link {
+  margin-top: 30px;
+}
+
+.rsvp-page {
+  min-height: calc(100vh - 156px);
+}
+
+.rsvp-page-heading {
+  padding: clamp(64px, 9vw, 110px) 24px 56px;
+  text-align: center;
+}
+
+.rsvp-page-heading .hero-ornament {
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.rsvp-page-heading h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(48px, 8vw, 82px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.rsvp-page-heading .section-copy {
+  margin-top: 18px;
+}
+
+.rsvp-form-section {
+  padding: 0 24px 110px;
+}
+
+.rsvp-form-card {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: clamp(30px, 6vw, 64px);
+  border: 1px solid rgba(221, 200, 142, 0.25);
+  background: var(--white);
+  text-align: center;
+}
+
+.rsvp-form-card h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.rsvp-form-card .section-copy {
+  margin-top: 14px;
+}
+
+.form-embed-placeholder {
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  padding: 32px 20px;
+  border: 1px dashed rgba(221, 200, 142, 0.42);
+  background: rgba(29, 48, 47, 0.28);
+}
+
+.placeholder-mark {
+  color: var(--accent);
+  font-family: var(--serif);
+  font-size: 28px;
+}
+
+.placeholder-mark span {
+  font-style: italic;
+}
+
+.placeholder-title {
+  margin: 18px 0 0;
+  font-family: var(--serif);
+  font-size: 25px;
+}
+
+.placeholder-copy,
+.form-help {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.placeholder-copy {
+  max-width: 350px;
+  margin: 10px 0 0;
+}
+
+.form-help {
+  margin: 22px 0 0;
+}
+
 .site-footer {
   display: flex;
   min-height: 100px;
@@ -514,6 +614,23 @@ a:focus-visible {
 
   .section-wrap {
     padding: 100px 24px;
+  }
+
+  .rsvp-page-heading {
+    padding: 58px 24px 38px;
+  }
+
+  .rsvp-form-section {
+    padding: 0 16px 76px;
+  }
+
+  .rsvp-form-card {
+    padding: 32px 20px;
+  }
+
+  .form-embed-placeholder {
+    min-height: 270px;
+    padding: 28px 16px;
   }
 
   .site-footer {
